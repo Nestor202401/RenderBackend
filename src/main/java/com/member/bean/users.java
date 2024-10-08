@@ -38,12 +38,6 @@ public class users {
 	@Column(name = "created_at")
 	@CreationTimestamp
 	private Timestamp createdAt;
-	
-	@Column(name = "verified")
-	private Boolean verified;
-	
-	@Column(name = "verification_code")
-	private String verificationCode;
 
 	public Integer getUserId() {
 		return userId;
@@ -100,25 +94,5 @@ public class users {
 	public void setCreatedAt(Timestamp createdAt) {
 		this.createdAt = createdAt;
 	}
-
-	public Boolean getVerified() {
-		return verified;
-	}
-
-	public void setVerified(Boolean verified) {
-		this.verified = verified;
-	}
-
-	public String getVerificationCode() {
-		return verificationCode;
-	}
-
-	public void setVerificationCode(String verificationCode) {
-		this.verificationCode = verificationCode;
-	}
-
-	
-
-	
 
 }
