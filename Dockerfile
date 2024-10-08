@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM openjdk:17-jdk-slim
+FROM maven:3.8.3-openjdk-17 AS build
 WORKDIR /app
 COPY . /app/
 RUN mvn clean package
