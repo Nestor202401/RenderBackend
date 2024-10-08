@@ -24,11 +24,17 @@ spring:
     # username: root
     # password: 123456
     # driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:postgresql://dpg-cs18sd3tq21c73emusjg-a.singapore-postgres.render.com:5432/shopping_rxt8
-    username: shopping_rxt8_user
-    password: jmoZaHKs5mkUvqrT3b4ry8tKhVi9ImbK  # 確保這個密碼不會被公開
+#    url: jdbc:postgresql://dpg-cs18sd3tq21c73emusjg-a.singapore-postgres.render.com:5432/shopping_rxt8
+#    username: shopping_rxt8_user
+#    password: jmoZaHKs5mkUvqrT3b4ry8tKhVi9ImbK  # 確保這個密碼不會被公開
+#    driver-class-name: org.postgresql.Driver
+#    spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false 
+    url: jdbc:postgresql://my-db-aasneen333-0f10.i.aivencloud.com:15422/defaultdb?sslmode=require
+    username: avnadmin
+    password: AVNS_V-DG-qQ5lRam-Y_pCER
     driver-class-name: org.postgresql.Driver
     spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false 
+
   jpa:
     hibernate:
       ddl-auto: update
