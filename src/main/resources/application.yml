@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: demo
+  rabbitmq:
+    addresses: localhost
+    username: guest
+    password: guest
+    virtual-host: /
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aasneen@gmail.com
+    password: kzvslzveqkbsaqwr  # 確保這個密碼不會被公開
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          debug: true  # 啟用詳細日誌
+  datasource:
+    # 如果使用 MySQL，可以取消註解以下設置
+    # url: jdbc:mysql://localhost:3306/buy?serverTimezone=Asia/Taipei
+    # username: root
+    # password: 123456
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://dpg-cs18sd3tq21c73emusjg-a.singapore-postgres.render.com:5432/shopping_rxt8
+    username: shopping_rxt8_user
+    password: jmoZaHKs5mkUvqrT3b4ry8tKhVi9ImbK  # 確保這個密碼不會被公開
+    driver-class-name: org.postgresql.Driver
+    spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # 確保使用 PostgreSQL 方言
